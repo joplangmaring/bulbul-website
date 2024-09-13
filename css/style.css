@@ -105,7 +105,7 @@ h6,
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: var(--dark);
 }
 
 
@@ -299,20 +299,61 @@ h6,
 
 .school-work {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+    grid-template-rows: repeat(4, auto);   /* Creates 4 rows */
+    gap: 1rem; 
     padding: 1rem; 
     max-width: 1200px; 
     margin: 0 auto; 
     background-color: #fff;
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
- 
 }
+.work-shop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 3 equal columns */
+    grid-template-rows: auto; /* Rows adjust automatically based on content */
+    gap: 1rem; /* Adds space between grid items */
+    padding: 1rem;
+    background-color: #f9f9f9; 
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333; 
+}
+
+.work-shop-talk {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 1rem; /* Adds space between grid items */
+    padding: 1rem;
+    background-color: #f9f9f9; /* Light background for visual clarity */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+
 .mentorship {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: #F3525A;
+}
+
+.consultancy {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 6 equal columns */
+    gap: 1rem; /* Adds space between grid items */
+    padding: 1rem;
+    background-color: #f9f9f9; /* Light background for visual clarity */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
 }
 
 .school-work span {
@@ -327,11 +368,22 @@ h6,
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.school-work span:hover {
+/* .consultancy span:hover {
+    background-color: transparent; 
+    border: 2px solid #F3525A;
+    color: #333; 
+} */
+/* .work-shop span:hover {
     background-color: transparent; 
     border: 2px solid #F3525A;
     color: #333; 
 }
+.work-shop-talk span:hover {
+    background-color: transparent; 
+    border: 2px solid #F3525A;
+    color: #333; 
+} */
+
 .head-servics {
     text-align: center;
     font-family:  Arial, Helvetica, sans-serif;
@@ -424,8 +476,27 @@ h6,
     .school-work {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
         padding: 0.5rem;
-        text-align: center;
     }
+
+    .work-shop{
+         display: flex;
+         flex-direction: column;
+         margin-right: 35px;
+         margin-left: 35px;
+    }
+
+    .work-shop-talk {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .consultancy {
+        display: flex;
+        flex-direction: column;
+        margin-right: 35px;
+        margin-left: 35px;
+    }
+
 
     .school-work span {
         font-size: 16px; 
@@ -467,9 +538,25 @@ h6,
   .link a{
       font-size: 10px;
   }
-    .school-work {
-        grid-template-columns: 1fr; 
-    }
+  
+  .work-shop{
+    display: flex;
+    flex-direction: column;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+.work-shop-talk {
+   display: flex;
+   flex-direction: column;
+
+}
+.consultancy {
+    display: flex;
+    flex-direction: column;
+    margin-right: 35px;
+    margin-left: 35px;
+}
 
     .school-work span {
         font-family: Arial, Helvetica, sans-serif;
