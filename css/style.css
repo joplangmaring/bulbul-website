@@ -94,7 +94,7 @@ h6,
     padding: 35px 15px;
     font-size: 18px;
     text-transform: uppercase;
-    color: var(--dark);
+    color: green;
     outline: none;
     transition: .5s;
 }
@@ -105,7 +105,7 @@ h6,
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--dark);
+   color: green;
 }
 
 
@@ -345,7 +345,7 @@ h6,
 
 .consultancy {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 6 equal columns */
+    grid-template-columns: repeat(3, 1fr); /* 6 equal columns */
     gap: 1rem; /* Adds space between grid items */
     padding: 1rem;
     background-color: #f9f9f9; /* Light background for visual clarity */
@@ -383,6 +383,19 @@ h6,
     border: 2px solid #F3525A;
     color: #333; 
 } */
+
+.logo {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto;    /* Maintains aspect ratio */
+    width: 70px;    /* Set a desired width */
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 100px; /* Smaller size for mobile screens */
+    }
+}
+
 
 .head-servics {
     text-align: center;
