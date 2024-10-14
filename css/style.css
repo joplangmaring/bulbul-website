@@ -321,7 +321,7 @@ h6,
 }
 @media (max-width: 600px) {
     #read-more{
-        background-color: rgb(92, 215, 92); /* Green background */
+        background-color: rgb(113, 238, 113); /* Green background */
         color: black; /* Black text */
         padding: 10px 20px; /* Padding for the button */
         font-size: 0.9rem; /* Smaller font size */
@@ -384,7 +384,7 @@ h6,
 }
 
 .consultancy-text {
-    background-color: rgb(92, 215, 92);
+    background-color: rgb(113, 238, 113);
     color: black;
     padding: 20px 0;
     width: 100%;
