@@ -94,7 +94,7 @@ h6,
     padding: 35px 15px;
     font-size: 18px;
     text-transform: uppercase;
-    color: green;
+    color:  rgb(92, 215, 92);
     outline: none;
     transition: .5s;
 }
@@ -105,7 +105,7 @@ h6,
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-   color: green;
+   color:  rgb(92, 215, 92);
 }
 
 
@@ -311,30 +311,38 @@ h6,
 }
 .work-shop {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Creates 3 equal columns */
-    grid-template-rows: auto; /* Rows adjust automatically based on content */
-    gap: 1rem; /* Adds space between grid items */
-    padding: 1rem;
-    background-color: #f9f9f9; 
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 10px; /* Space between items */
+    padding: 30px;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #333; 
+    max-width: 1000px;
+    margin: 0 auto; /* Center the grid on the page */
+}
+@media (max-width: 600px) {
+    #read-more{
+        background-color: rgb(92, 215, 92); /* Green background */
+        color: black; /* Black text */
+        padding: 10px 20px; /* Padding for the button */
+        font-size: 0.9rem; /* Smaller font size */
+        text-align: center;
+        display: inline-block;
+        border-radius: 50px; /* Rounded edges (pill-shaped) */
+        width: 100%; /* Full width for better usability */
+    }
+}
+/* Style for each span (workshop location) */
+.work-shop span {
+    background-color: #eaeaea;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.work-shop-talk {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    gap: 1rem; /* Adds space between grid items */
-    padding: 1rem;
-    background-color: #f9f9f9; /* Light background for visual clarity */
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #333;
-}
 
 
 .mentorship {
@@ -343,18 +351,88 @@ h6,
     color: #F3525A;
 }
 
-.consultancy {
+.consultancy-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 6 equal columns */
-    gap: 1rem; /* Adds space between grid items */
-    padding: 1rem;
-    background-color: #f9f9f9; /* Light background for visual clarity */
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #333;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
 }
+.workshop-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.consultancy-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.consultancy-item:hover {
+    transform: scale(1.02); /* Slightly enlarge the element */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+}
+
+
+.consultancy-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.consultancy-text {
+    background-color: rgb(92, 215, 92);
+    color: black;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 0 0 8px 8px;
+}
+
+/* Initially hide the full text and show "Read More" */
+.full-text {
+    display: none;
+}
+
+.read-more-text .summary {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Show full text on hover (for desktops) */
+.read-more-text:hover .summary {
+    display: none;
+}
+
+.read-more-text:hover .full-text {
+    display: inline-block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .consultancy-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+    .workshop-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .consultancy-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+    .workshop-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
 
 .school-work span {
     display: block;
@@ -403,7 +481,6 @@ h6,
     color: #F3525A;
 }
 .backcolor {
-    padding: 40px;
     margin-bottom: 40px;
 }
 .testimonials-section {
@@ -491,18 +568,7 @@ h6,
         padding: 0.5rem;
     }
 
-    .work-shop{
-         display: flex;
-         flex-direction: column;
-         margin-right: 35px;
-         margin-left: 35px;
-    }
 
-    .work-shop-talk {
-        display: flex;
-        flex-direction: column;
-
-    }
     .consultancy {
         display: flex;
         flex-direction: column;
@@ -552,18 +618,7 @@ h6,
       font-size: 10px;
   }
   
-  .work-shop{
-    display: flex;
-    flex-direction: column;
-    margin-right: 35px;
-    margin-left: 35px;
-}
 
-.work-shop-talk {
-   display: flex;
-   flex-direction: column;
-
-}
 .consultancy {
     display: flex;
     flex-direction: column;
